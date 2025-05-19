@@ -1,0 +1,89 @@
+.auto-carousel {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.carousel-item {
+    flex: 0 0 calc(33.333% - 20px);
+    min-width: 300px;
+    background: #242943;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.carousel-item:hover {
+    transform: translateY(-5px);
+}
+
+.carousel-item .image img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.carousel-controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Consider improving button visibility */
+.carousel-prev,
+.carousel-next {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 50px; /* Ancho del área sensible */
+	background: transparent; /* Color de fondo transparente (opcional, para depuración) */
+	cursor: pointer;
+	z-index: 1; /* Asegura que estén por encima del contenido */
+}
+
+
+.carousel-prev {
+	left: 0;
+}
+
+.carousel-next {
+	right: 0;
+}
+
+/* Opcional: Para depuración, puedes darles un color visible temporalmente */
+.carousel-prev:hover,
+.carousel-next:hover,
+
+/* Oculta el botón de pausa, ya que ahora los controles están en los laterales */
+.carousel-controls button {
+	display: none; /* Oculta el botón */
+}
+
+@media (max-width: 768px) {
+    .carousel-item {
+		flex: 0 0 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-item {
+        flex: 0 0 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-item {
+        flex: 0 0 calc(100% - 20px);
+    }
+}
