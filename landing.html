@@ -24,6 +24,80 @@
 				display: inline-flex;
 				align-items: center;
 			}
+
+			#catalogo .carrusel-container {
+				position: relative;
+				width: 100%;
+				aspect-ratio: 16/9; /* Proporción recomendada (ajusta según necesidad) */
+				overflow: hidden;
+				margin-bottom: 1em;
+			}
+
+			#catalogo .carrusel-slides .slide {
+				display: none;
+				position: relative;
+				width: 100%;
+				height: 100%;
+			}
+
+			#catalogo .carrusel-slides .slide.active {
+				display: block;
+			}
+
+			#catalogo .carrusel-slides .slide a.image {
+				display: block;
+				width: 100%;
+				height: 100%;
+			}
+
+			#catalogo .carrusel-slides .slide a.image img {
+				width: 100%;
+				height: 100%;
+				object-fit: contain; /* Cambiado de 'cover' a 'contain' para ver imagen completa */
+				object-position: center;
+			}
+
+			/* Botones de navegación */
+			#catalogo .carrusel-prev,
+			#catalogo .carrusel-next {
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				background-color: rgba(0,0,0,0.5);
+				color: white;
+				border: none;
+				padding: 10px 15px;
+				cursor: pointer;
+				z-index: 10;
+				font-size: 1.2em;
+				border-radius: 50%;
+			}
+
+			#catalogo .carrusel-prev {
+				left: 15px;
+			}
+
+			#catalogo .carrusel-next {
+				right: 15px;
+			}
+
+			/* Ajustes para móviles */
+			@media (max-width: 736px) {
+				#catalogo .carrusel-container {
+					aspect-ratio: 1/1; /* Cuadrado en móviles o mantén 16/9 según prefieras */
+				}
+				
+				#catalogo .carrusel-prev,
+				#catalogo .carrusel-next {
+					padding: 8px 12px;
+					font-size: 1em;
+				}
+				
+				.slide-caption {
+					font-size: 0.8em;
+					padding: 5px;
+				}
+			}
 		</style>
 
 	</head>
@@ -109,10 +183,6 @@ Confíe en Consultoria & Proyecto VGC SRL: su éxito es nuestra prioridad.
 							<!-- El contenido se generará dinámicamente con JavaScript -->
 							</section>
 
-						<section id="catalogo" class="spotlights">
-						<!-- El contenido se generará dinámicamente -->
-						</section>
-
 						<script>
 						const itemsCatalogo = [
 							{
@@ -163,12 +233,12 @@ Confíe en Consultoria & Proyecto VGC SRL: su éxito es nuestra prioridad.
 							// Generar HTML para el carrusel
 							catalogoContainer.innerHTML += `
 								<section>
-								<div class="carrusel-container" style="position: relative;">
+								<div class="carrusel-container">
 									<div class="carrusel-slides" id="carrusel-${index}">
 									${item.imagenes.map((img, i) => `
 										<div class="slide ${i === 0 ? 'active' : ''}">
 										<a class="image">
-											<img src="${img}" alt="${item.titulo}" style="width: 576px; height: 515px;" />
+											<img src="${img}" alt="${item.titulo}" />
 										</a>
 										<div class="slide-caption">${item.descripciones[i]}</div>
 										</div>
@@ -195,7 +265,7 @@ Confíe en Consultoria & Proyecto VGC SRL: su éxito es nuestra prioridad.
 							catalogoContainer.innerHTML += `
 								<section>
 								<a class="image">
-									<img src="${item.imagen}" alt="${item.titulo}" style="width: 576px; height: 515px;" />
+									<img src="${item.imagen}" alt="${item.titulo}" />
 								</a>
 								<div class="content">
 									<div class="inner">
@@ -271,7 +341,7 @@ Confíe en Consultoria & Proyecto VGC SRL: su éxito es nuestra prioridad.
 					<section id="contact">
 						<div class="inner">
 							<section>
-								<form method="post" action="#" data-netlify="true" netlify-honeypot="bot-field">
+								<form method="post" action="success.html" data-netlify="true" netlify-honeypot="bot-field">
 									<div class="fields">
 										<div class="field half">
 											<label for="name">Nombre</label>
