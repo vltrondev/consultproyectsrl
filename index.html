@@ -312,10 +312,16 @@
 					<section id="contact">
 						<div class="inner">
 							<section>
-								<form method="post" action="/success.html" data-netlify="true" netlify-honeypot="bot-field">
+								<form method="post" name="contact-es" action="success.html" data-netlify="true" netlify-honeypot="bot-field">
+									<!-- Campos ocultos para Netlify -->
+									<input type="hidden" name="form-name" value="contact-en" />
+									<input type="hidden" name="_next" value="/success.html" />
+									<p class="hidden" style="display:none;"> <!-- Campo Honeypot -->
+										<label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+									</p>
 									<div class="fields">
 										<div class="field half">
-											<label for="name">Nombre</label>
+											<label for="name">Name</label>
 											<input type="text" name="name" id="name" />
 										</div>
 										<div class="field half">
@@ -323,12 +329,12 @@
 											<input type="text" name="email" id="email" />
 										</div>
 										<div class="field">
-											<label for="message">Mensaje</label>
+											<label for="message">Message</label>
 											<textarea name="message" id="message" rows="6"></textarea>
 										</div>
 									</div>
 									<ul class="actions">
-										<li><input type="submit" value="Enviar Mensaje" class="primary" /></li>
+										<li><input type="submit" value="Enviar mensaje" class="primary" /></li>
 										<li><input type="reset" value="Limpiar" /></li>
 									</ul>
 								</form>

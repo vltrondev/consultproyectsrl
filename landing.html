@@ -341,7 +341,13 @@ Confíe en Consultoria & Proyecto VGC SRL: su éxito es nuestra prioridad.
 					<section id="contact">
 						<div class="inner">
 							<section>
-								<form method="post" action="/success.html" data-netlify="true" netlify-honeypot="bot-field">
+								<form method="post" name="contact-es" action="success.html" data-netlify="true" netlify-honeypot="bot-field">
+									<!-- Campos ocultos para Netlify -->
+									<input type="hidden" name="form-name" value="contact-es" />
+									<input type="hidden" name="_next" value="/success.html" />
+									<p class="hidden" style="display:none;"> <!-- Campo Honeypot -->
+										<label>No llenar si eres humano: <input name="bot-field" /></label>
+									</p>
 									<div class="fields">
 										<div class="field half">
 											<label for="name">Nombre</label>
