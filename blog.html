@@ -1,0 +1,353 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Blog - Consultoria & Proyecto VGC SRL</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			/* Estilos para el logo */
+			.header-logo {
+				height: 2.5em; /* Ajusta según necesites */
+				vertical-align: middle;
+				margin-right: 0.5em;
+			}
+			.logo {
+				display: inline-flex;
+				align-items: center;
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">
+							<img src="images/LOGO1-2.png" alt="Logo VGC" class="header-logo">
+							<strong>VGC SRL</strong> <span>Consultoria & Proyecto</span>
+						</a>
+						<nav>
+							<div class="language-switcher">
+								<strong class="lang-active">ES</strong> | <a href="blog_en.html">EN</a>
+							</div>
+							<a href="blog.html" style="margin: 0 0.75em;">Blog</a>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="landing.html">Empresa</a></li>
+							<li><a href="generic.html">Servicios</a></li>
+							<li><a href="elements.html">Materias legales</a></li>
+							<li><a href="blog.html">Blog</a></li>
+						</ul>
+						<ul class="actions stacked">
+							<li><a href="#contact" class="button primary fit scrolly">CONTACTAR</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main" class="alt">
+
+						<!-- One: Título de la página del Blog -->
+						<section id="one">
+							<div class="inner">
+								<header class="major">
+									<h1>Nuestro Blog de Discusión</h1>
+								</header>
+								<p>Bienvenido a nuestro espacio de discusión. Participa en los temas existentes o propón uno nuevo. Te invitamos a leer, comentar y compartir tus ideas.</p>
+
+								<!-- Formulario para Iniciar un Nuevo Tema/Discusión (Maqueta) -->
+								<div class="new-topic-form" style="margin-top: 2em; margin-bottom: 3em; padding: 1.5em; border: 1px solid rgba(255,255,255,0.1);">
+									<h3>Iniciar un Nuevo Tema de Discusión</h3>
+									<form id="newTopicForm">
+										<div class="fields">
+											<div class="field half">
+												<label for="topic_name">Tu Nombre</label>
+												<input type="text" name="topic_name" id="topic_name" required />
+											</div>
+											<div class="field half">
+												<label for="topic_title">Título del Tema</label>
+												<input type="text" name="topic_title" id="topic_title" required />
+											</div>
+											<div class="field">
+												<label for="topic_message">Tu Mensaje / Propuesta de Tema</label>
+												<textarea name="topic_message" id="topic_message" rows="4" required></textarea>
+											</div>
+										</div>
+										<ul class="actions"><li><input type="submit" value="Proponer Tema" class="primary" /></li></ul>
+										<p id="newTopicMessage" style="margin-top:1em;"></p>
+									</form>
+								</div>
+							</div>
+						</section>
+
+						<!-- Two: Listado de Temas de Discusión (se llenará con JavaScript) -->
+						<section id="topicsContainer" class="spotlights">
+							<!-- Los temas se cargarán aquí -->
+							<p style="text-align: center; width:100%; padding: 2em 0;">Cargando temas...</p>
+						</section>
+
+					</div>
+
+				<!-- Contact -->
+					<section id="contact">
+						<div class="inner">
+							<section style="display: none;"> <!-- Ocultamos el formulario de contacto general de esta página, ya que el foco es el blog -->
+								<form method="post" name="contact-es-blog" action="success.html" data-netlify="true" netlify-honeypot="bot-field">
+									<input type="hidden" name="form-name" value="contact-es-blog" />
+									<input type="hidden" name="_next" value="/success.html" />
+									<p class="hidden" style="display:none;">
+										<label>No llenar si eres humano: <input name="bot-field" /></label>
+									</p>
+									<div class="fields">
+										<div class="field half">
+											<label for="name">Nombre</label>
+											<input type="text" name="name" id="name" />
+										</div>
+										<div class="field half">
+											<label for="email">Email</label>
+											<input type="text" name="email" id="email" />
+										</div>
+										<div class="field">
+											<label for="message">Mensaje</label>
+											<textarea name="message" id="message" rows="6"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Enviar mensaje" class="primary" /></li>
+										<li><input type="reset" value="Limpiar" /></li>
+									</ul>
+								</form>
+							</section>
+							<section class="split">
+								<section>
+									<div class="contact-method">
+										<span class="icon solid alt fa-envelope"></span>
+										<h3>Email</h3>
+										<a href="mailto:servicios@corpjuridicagva.net">servicios@corpjuridicagva.net</a>
+									</div>
+								</section>
+								<section>
+									<div class="contact-method">
+										<span class="icon solid alt fa-phone"></span>
+										<h3>Teléfono</h3>
+										<span>(809) 482-1478 - </span>
+										<span> (829) 343-6733 </span>
+									</div>
+								</section>
+								<section>
+									<div class="contact-method">
+										<span class="icon solid alt fa-home"></span>
+										<h3>Dirección</h3>
+											<span>Mercedes Laura aguilar #35<br />
+										Distrito Nacional, Santo domingo 11702<br />
+										Republica Dominicana</span>
+									</div>
+								</section>
+							</section>
+						</div>
+					</section>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<ul class="icons">
+								<li><a href="https://x.com/VgcSrl" target="_blank" class="icon brands alt fa-x-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="https://www.facebook.com/profile.php?id=61576756221230" target="_blank" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+								<li><a href="https://www.instagram.com/vgcsrl/" target="_blank" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; <a href="https://www.instagram.com/srdevelop/">srdevelop</a></li><li>Diseño: <a href="https://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			
+			<script>
+				document.addEventListener('DOMContentLoaded', function() {
+					const topicsContainer = document.getElementById('topicsContainer');
+					const newTopicForm = document.getElementById('newTopicForm');
+					const newTopicMessage = document.getElementById('newTopicMessage');
+
+					// Cargar Temas
+					async function loadTopics() {
+						try {
+							const response = await fetch('/.netlify/functions/get-topics');
+							if (!response.ok) throw new Error(`Error al cargar temas: ${response.statusText}`);
+							const topics = await response.json();
+
+							topicsContainer.innerHTML = ''; // Limpiar "Cargando..." o temas anteriores
+							if (topics.length === 0) {
+								topicsContainer.innerHTML = '<p style="text-align: center; width:100%; padding: 2em 0;">Aún no hay temas de discusión. ¡Sé el primero en proponer uno!</p>';
+								return;
+							}
+
+							topics.forEach(topic => {
+								const topicElement = document.createElement('section');
+								topicElement.innerHTML = `
+									<div class="content">
+										<div class="inner">
+											<header class="major">
+												<h3>${topic.title}</h3>
+											</header>
+											<p>${topic.content}</p>
+											<p><small>Publicado el: ${topic.date} por ${topic.author}</small></p>
+											
+											<div class="comments-section" style="margin-top: 2em; text-align: left;">
+												<h4>Comentarios</h4>
+												<div id="comments-for-topic-${topic.id}" style="border: 1px solid rgba(255,255,255,0.1); padding: 1em; margin-bottom: 1em; max-height: 250px; overflow-y: auto;">
+													<p>Cargando comentarios...</p>
+												</div>
+												<form class="comment-form" data-topic-id="${topic.id}">
+													<h5>Deja tu Comentario</h5>
+													<div class="fields">
+														<div class="field half">
+															<label for="comment_name_${topic.id}">Nombre</label>
+															<input type="text" name="comment_name" id="comment_name_${topic.id}" required />
+														</div>
+														<div class="field">
+															<label for="comment_message_${topic.id}">Comentario</label>
+															<textarea name="comment_message" id="comment_message_${topic.id}" rows="3" required></textarea>
+														</div>
+													</div>
+													<ul class="actions"><li><input type="submit" value="Enviar Comentario" class="primary small" /></li></ul>
+													<p class="comment-message-status" style="margin-top:0.5em;"></p>
+												</form>
+											</div>
+										</div>
+									</div>
+								`;
+								topicsContainer.appendChild(topicElement);
+								loadComments(topic.id);
+							});
+
+							// Adjuntar event listeners a los nuevos formularios de comentarios
+							document.querySelectorAll('.comment-form').forEach(form => {
+								form.addEventListener('submit', handleCommentSubmit);
+							});
+
+						} catch (error) {
+							console.error(error);
+							topicsContainer.innerHTML = `<p style="text-align: center; color: red;">Error al cargar temas: ${error.message}</p>`;
+						}
+					}
+
+					// Cargar Comentarios para un Tema
+					async function loadComments(topicId) {
+						const commentsDiv = document.getElementById(`comments-for-topic-${topicId}`);
+						try {
+							const response = await fetch(`/.netlify/functions/get-comments?topicId=${topicId}`);
+							if (!response.ok) throw new Error(`Error al cargar comentarios: ${response.statusText}`);
+							const comments = await response.json();
+
+							commentsDiv.innerHTML = '';
+							if (comments.length === 0) {
+								commentsDiv.innerHTML = '<p>Aún no hay comentarios. ¡Sé el primero!</p>';
+								return;
+							}
+							comments.forEach(comment => {
+								const commentP = document.createElement('p');
+								commentP.innerHTML = `<strong>${comment.author}</strong> <small>(${comment.date})</small>: ${comment.text}`;
+								commentsDiv.appendChild(commentP);
+							});
+						} catch (error) {
+							console.error(error);
+							commentsDiv.innerHTML = `<p style="color: red;">Error al cargar comentarios: ${error.message}</p>`;
+						}
+					}
+
+					// Manejar envío de Nuevo Tema
+					newTopicForm.addEventListener('submit', async function(event) {
+						event.preventDefault();
+						newTopicMessage.textContent = 'Enviando...';
+						const formData = new FormData(newTopicForm);
+						const data = {
+							topic_name: formData.get('topic_name'),
+							topic_title: formData.get('topic_title'),
+							topic_message: formData.get('topic_message')
+						};
+
+						try {
+							const response = await fetch('/.netlify/functions/submit-topic', {
+								method: 'POST',
+								headers: { 'Content-Type': 'application/json' },
+								body: JSON.stringify(data)
+							});
+							const result = await response.json();
+							newTopicMessage.textContent = result.message;
+							if (result.success) {
+								newTopicForm.reset();
+								// Opcional: Recargar temas para ver el nuevo (si la función lo guardara y get-topics lo devolviera)
+								// loadTopics(); 
+							}
+						} catch (error) {
+							console.error(error);
+							newTopicMessage.textContent = 'Error al enviar el tema.';
+						}
+					});
+
+					// Manejar envío de Comentario (delegado, ya que los forms se crean dinámicamente)
+					async function handleCommentSubmit(event) {
+						event.preventDefault();
+						const form = event.target;
+						const topicId = form.dataset.topicId;
+						const statusP = form.querySelector('.comment-message-status');
+						statusP.textContent = 'Enviando...';
+						
+						const formData = new FormData(form);
+						const data = {
+							topicId: topicId,
+							comment_name: formData.get('comment_name'),
+							comment_message: formData.get('comment_message')
+						};
+
+						try {
+							const response = await fetch('/.netlify/functions/submit-comment', {
+								method: 'POST',
+								headers: { 'Content-Type': 'application/json' },
+								body: JSON.stringify(data)
+							});
+							const result = await response.json();
+							statusP.textContent = result.message;
+							if (result.success) {
+								form.reset();
+								loadComments(topicId); // Recargar comentarios para este tema
+							}
+						} catch (error) {
+							console.error(error);
+							statusP.textContent = 'Error al enviar el comentario.';
+						}
+					}
+
+					// Carga inicial
+					loadTopics();
+				});
+			</script>
+
+	</body>
+</html>
